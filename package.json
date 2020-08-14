@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
   "dependencies": {
-    "strava-stats": "file:../strava-stats/pkg",
+    "strava-stats-wasm": "0.2.0",
     "vue": "^3.0.0-rc.5"
   },
   "devDependencies": {

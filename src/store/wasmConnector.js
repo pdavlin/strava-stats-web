@@ -10,7 +10,7 @@ const state = reactive({
 export default function useWasm() {
   const loadWasm = async () => {
     try {
-      const wasmPlaceholder = await import('strava-stats');
+      const wasmPlaceholder = await import('strava-stats-wasm');
       setWasm(wasmPlaceholder);
     } catch (e) {
       state.error = e;
