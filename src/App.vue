@@ -15,7 +15,7 @@ import NavBar from "./components/NavBar.vue";
     HelloWorld,
     NavBar
   },
-  async mounted() {
+  async created() {
     await this.$store.commit("loadWasm");
     const wasm = await this.$store.getters.getWasm;
     wasm.greet();

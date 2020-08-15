@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>I am trying to load WebAssembly!</h1>
-    <b-button type="is-primary">hi</b-button>
+    <!-- <b-button type="is-primary">hi</b-button> -->
   </div>
 </template>
 
