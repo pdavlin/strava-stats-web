@@ -16,8 +16,7 @@ import NavBar from "./components/NavBar.vue";
     NavBar
   },
   async created() {
-    await this.$store.commit("loadWasm");
-    const wasm = await this.$store.getters.getWasm;
+    const wasm = await import("strava-stats-wasm");
     wasm.greet();
   }
 })
