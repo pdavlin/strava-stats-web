@@ -1,14 +1,18 @@
 <template>
   <div class="hello">
-    <h1>I am trying to load WebAssembly!</h1>
-    <!-- <b-button type="is-primary">hi</b-button> -->
+    <StravaTable />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import StravaTable from "./StravaTable.vue";
 
-@Component
+@Component({
+  components: {
+    StravaTable
+  }
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 }

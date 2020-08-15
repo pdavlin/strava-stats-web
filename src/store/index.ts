@@ -16,9 +16,13 @@ export default new Vuex.Store({
         state.wasmLoaded = true;
       }
     },
+    setWasm(state, payload) {
+      state.wasm = payload.wasm;
+    },
   },
   getters: {
     getWasm: (state) => state.wasm,
+    getLoaded: (state) => state.wasmLoaded,
   },
   actions: {},
   modules: {},

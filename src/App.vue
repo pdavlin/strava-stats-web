@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <NavBar />
+    <b-button type="is-primary" v-on:click="slamWasm()">Load WebAssembly</b-button>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -9,6 +10,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "./components/HelloWorld.vue";
 import NavBar from "./components/NavBar.vue";
+import * as wasm from "strava-stats-wasm";
 
 @Component({
   components: {
@@ -16,8 +18,15 @@ import NavBar from "./components/NavBar.vue";
     NavBar
   },
   async created() {
+    // load WebAssembly library into global state
     const wasm = await import("strava-stats-wasm");
-    wasm.greet();
+    this.$store.commit({ type: "loadWasm", wasm: wasm });
+  },
+  methods: {
+    slamWasm(): void {
+      const retrievedWasm = this.$store.getters.getWasm;
+      retrievedWasm.greet();
+    }
   }
 })
 export default class App extends Vue {}
