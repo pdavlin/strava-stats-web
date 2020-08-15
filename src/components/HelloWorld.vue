@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <StravaTable />
+    <b-button type="is-primary" v-on:click="slamWasm()">Load WebAssembly</b-button>
   </div>
 </template>
 
@@ -11,6 +12,12 @@ import StravaTable from "./StravaTable.vue";
 @Component({
   components: {
     StravaTable
+  },
+  methods: {
+    slamWasm(): void {
+      const retrievedWasm = this.$store.getters.getWasm;
+      retrievedWasm.greet();
+    }
   }
 })
 export default class HelloWorld extends Vue {

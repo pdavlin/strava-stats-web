@@ -2,9 +2,6 @@
   <b-navbar>
     <template slot="brand">
       <h1 class="page-title">PTCG Stats</h1>
-      <!-- <b-navbar-item>
-        <h1>PTCG Stats</h1>
-      </b-navbar-item> -->
     </template>
   </b-navbar>
 </template>
