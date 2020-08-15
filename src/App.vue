@@ -10,7 +10,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "./components/HelloWorld.vue";
 import NavBar from "./components/NavBar.vue";
-import * as wasm from "strava-stats-wasm";
 
 @Component({
   components: {
@@ -32,7 +31,7 @@ import * as wasm from "strava-stats-wasm";
 export default class App extends Vue {}
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

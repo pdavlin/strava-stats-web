@@ -22,8 +22,5 @@ export default new Vuex.Store({
   },
   getters: {
     getWasm: (state) => state.wasm,
-    getLoaded: (state) => state.wasmLoaded,
   },
-  actions: {},
-  modules: {},
 });
