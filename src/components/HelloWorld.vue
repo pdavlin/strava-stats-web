@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-
     <b-button type="is-primary">hi</b-button>
   </div>
 </template>
@@ -16,6 +15,7 @@ export default class HelloWorld extends Vue {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/styles/main";
 h3 {
   margin: 40px 0 0;
 }
@@ -28,6 +28,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: $primary;
 }
 </style>

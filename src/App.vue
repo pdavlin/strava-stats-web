@@ -12,17 +12,14 @@ import HelloWorld from "./components/HelloWorld.vue";
 import NavBar from "./components/NavBar.vue";
 
 @Component({
-  data() {
-    return { wasm: null };
-  },
   components: {
     HelloWorld,
     NavBar
   },
   async mounted() {
     await this.$store.commit("loadWasm");
-    this.wasm = this.$store.getters.getWasm;
-    this.wasm.greet();
+    const wasm = await this.$store.getters.getWasm;
+    wasm.greet();
   }
 })
 export default class App extends Vue {}
